@@ -41,7 +41,7 @@ class App extends Component {
     } = this;
 
     return (
-      <Container>
+      <>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={ratings}
@@ -49,18 +49,20 @@ class App extends Component {
           />
         </Section>
 
-        {countTotalFeedback() === 0 ? (
-          <Notification message={'There is no feedback'} />
-        ) : (
-          <Statistics
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            total={countTotalFeedback()}
-            positivePercentage={countPositiveFeedbackPercentage()}
-          />
-        )}
-      </Container>
+        <Section title="Statistics">
+          {countTotalFeedback() === 0 ? (
+            <Notification message={'There is no feedback'} />
+          ) : (
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={countTotalFeedback()}
+              positivePercentage={countPositiveFeedbackPercentage()}
+            />
+          )}
+        </Section>
+      </>
     );
   }
 }

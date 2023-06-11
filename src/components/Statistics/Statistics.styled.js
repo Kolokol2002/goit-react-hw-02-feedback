@@ -19,8 +19,6 @@ export const Container = styled.div`
   }
 `;
 
-export const Title = styled.h2``;
-
 export const Items = styled.ul`
   list-style: none;
   padding: 0;

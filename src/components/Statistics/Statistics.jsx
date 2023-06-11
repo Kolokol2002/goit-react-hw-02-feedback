@@ -10,7 +10,6 @@ import {
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
   <Container>
-    <Title>Statistics</Title>
     <Items>
       <Item>Good: {good}</Item>
       <Item>Neutral: {neutral}</Item>
